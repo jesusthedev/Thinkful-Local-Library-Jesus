@@ -1,7 +1,9 @@
+//function finds the accounts by given ID
 function findAccountById(accounts, id) {
   return accounts.find((account) => account.id.includes(id));
 }
 
+//function sorts accounts by last name
 function sortAccountsByLastName(accounts) {
   return accounts.sort((lastA,lastB) => 
     lastA.name.last.toLowerCase() > lastB.name.last.toLowerCase() ? 1 : -1 );
@@ -20,7 +22,7 @@ function getTotalNumberOfBorrows(account, books) {
   });
   return result;
 }
-
+//Helper function that returns author
 function _getAuthor(book, authors) {
   const author = authors.find((author) => author.id === book.authorId);
   return author;
